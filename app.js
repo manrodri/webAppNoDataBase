@@ -1,6 +1,7 @@
 var express = require("express");
 var app = express();
 var bodyParser = require("body-parser");
+const port = 8081
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
@@ -39,6 +40,6 @@ app.get("/campgrounds/new", function(req, res){
    res.render("new.ejs"); 
 });
 
-app.listen(process.env.PORT, process.env.IP, function(){
+app.listen(port, function(){
    console.log("The YelpCamp Server Has Started!");
 });
