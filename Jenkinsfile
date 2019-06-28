@@ -1,5 +1,4 @@
 pipeline {
-    git 'https://github.com/manrodri/webAppNoDataBase.git'
     agent any
     stages {
         stage('Build'){
