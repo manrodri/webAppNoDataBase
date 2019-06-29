@@ -27,7 +27,6 @@ pipeline {
                                         removePrefix: 'dist/',
                                         remoteDirectory: '/tmp',
                                         execCommand: 'echo HELLO_WORLD'
-                                        execCommand: 'echo HELLO_WORLD_AGAIN'
                                         //execCommand: 'sudo /usr/bin/systemctl stop webAppUseCase.service && rm -rf /opt/webAppUseCase/* && unzip /tmp/app.zip -d /opt/webAppUseCase && sudo /usr/bin/systemctl start webAppUseCase'
                                     )
                                 ]
@@ -58,7 +57,6 @@ pipeline {
                                         removePrefix: 'dist/',
                                         remoteDirectory: '/tmp',
                                         execCommand: 'echo HELLO_WORLD_AGAIN'
-                                        execCommand: 'echo HELLO_WORLD'
                                         //execCommand: 'sudo /usr/bin/systemctl stop webAppUseCase.service && rm -rf /opt/webAppUseCase/* && unzip /tmp/app.zip -d /opt/webAppUseCase && sudo /usr/bin/systemctl start webAppUseCase'
                                     )
                                 ]
