@@ -13,7 +13,7 @@ pipeline {
                 script {
                     app = docker.build("manrodri/yelp_camp")
                     app.inside {
-                        sh 'echo CURL OUTPUT: \n$(curl localhost:80)'
+                        sh 'echo CURL OUTPUT: \n$(curl localhost:8081)'
                     }
                 }
             }
@@ -22,6 +22,7 @@ pipeline {
 
             steps {
                 script {
+                    sh 'echo PUSHING TO REPO...'
                     docker.withRegistry('https://registry.hub.docker.com', 'docker_hub_login') {
                         app.push("${env.BUILD_NUMBER}")
                         app.push("latest")
