@@ -11,9 +11,9 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 script {
-                    app = docker.build("manrodri/yelp_camp")
-                    app.inside {
-                        sh 'echo CURL OUTPUT: \n$(curl localhost:8081)'
+                    sh 'echo running: DOCKER BUILD...'
+                    sh "docker build -t manrodri/yelp_camp:latest ."
+                    sh 'echo DOCKER BUILD SUCCESSFUL'
                     }
                 }
             }
@@ -24,8 +24,7 @@ pipeline {
                 script {
                     sh 'echo PUSHING TO REPO...'
                     docker.withRegistry('https://registry.hub.docker.com', 'docker_hub_login') {
-                        app.push("${env.BUILD_NUMBER}")
-                        app.push("latest")
+                        sh "docker push manrodri/yelp_camp:latest"
                     }
                 }
             }
