@@ -4,7 +4,7 @@
   "description": "YelpCamp v1",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha"
   },
   "author": "Colt Steele",
   "license": "ISC",
@@ -13,7 +13,10 @@
     "ejs": "^2.6.2",
     "express": "^4.17.1"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^6.1.4"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/manrodri/webAppNoDataBase.git"
