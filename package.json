@@ -1,5 +1,5 @@
 {
-  "name": "v1",
+  "name": "yelp_camp",
   "version": "1.0.0",
   "description": "YelpCamp v1",
   "main": "app.js",
@@ -9,8 +9,17 @@
   "author": "Colt Steele",
   "license": "ISC",
   "dependencies": {
-    "body-parser": "^1.14.1",
-    "ejs": "^2.3.4",
-    "express": "^4.13.3"
-  }
+    "body-parser": "^1.19.0",
+    "ejs": "^2.6.2",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/manrodri/webAppNoDataBase.git"
+  },
+  "bugs": {
+    "url": "https://github.com/manrodri/webAppNoDataBase/issues"
+  },
+  "homepage": "https://github.com/manrodri/webAppNoDataBase#readme"
 }
